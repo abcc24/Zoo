@@ -71,4 +71,4 @@ class ZooKeeper:
                     fence.animal.remove(animal)
                     print(f"The cleaning time is {clean}")
 
-zookeeper1: ZooKeeper = ZooKeeper("Rocco" "Balocco", 237)
+zookeeper1: ZooKeeper = ZooKeeper("Rocco", "Balocco", "1g")
