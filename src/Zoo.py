@@ -44,7 +44,7 @@ class ZooKeeper:
                     fence.animal.append(animal)
                     print(f"The new animal is a {animal.species}")
                 else:
-                    ("No new animal")
+                    print("No new animal")
 
     def remove_animal(self, animal: Animal, fence: Fence):
         if animal in fence.animal:
@@ -52,7 +52,7 @@ class ZooKeeper:
             fence.animal.remove(animal)
             print(f"The animal was removed")
  
-    def feed(self, animal: Animal, fence: Fence = None):
+    def feed(self, animal: Animal, fence: Fence):
         if animal.health < 100 and animal.animal_area < fence.area:
             animal.health = animal.health + (animal.health * 1.01)
             animal.animal_area = animal.animal_area + (animal.animal_area * 1.02)
@@ -70,3 +70,5 @@ class ZooKeeper:
                 for animal in fence.animal:
                     fence.animal.remove(animal)
                     print(f"The cleaning time is {clean}")
+
+zookeeper1: ZooKeeper = ZooKeeper("Rocco" "Balocco", 237)
